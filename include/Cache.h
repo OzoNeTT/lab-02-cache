@@ -37,6 +37,18 @@ void addDataToString(string& str, unsigned int id, string name, int64_t time, un
 
 }
 
+void GraphBuild(vector<Node> vect) {
+    vector<string> columnNames;
+    vector<unsigned int> bufferSizes;
+    vector<vector<unsigned int>> rows;
+
+    for (size_t i = 0; i < vect.size(); i++) {
+        Node node = vect[i];
+        columnNames.push_back(node.name);
+        bufferSizes.push_back(node.buffer);
+    }
+}
+
 bool Cache::run() {
     unsigned int counter = 0;
     unsigned int cap = 4096;
