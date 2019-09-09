@@ -1,0 +1,163 @@
+investigation:
+	travel_variant: Forward
+	experiments:
+		-experiment:
+		number: 1
+		input_data:
+			buffer_size: 16
+		results:
+			duration: 13
+investigation:
+	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 1
+		input_data:
+			buffer_size: 16
+		results:
+			duration: 12
+investigation:
+	travel_variant: Random
+	experiments:
+		-experiment:
+		number: 1
+		input_data:
+			buffer_size: 16
+		results:
+			duration: 13
+investigation:
+	travel_variant: Forward
+	experiments:
+		-experiment:
+		number: 2
+		input_data:
+			buffer_size: 32
+		results:
+			duration: 33
+investigation:
+	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 2
+		input_data:
+			buffer_size: 32
+		results:
+			duration: 37
+investigation:
+	travel_variant: Random
+	experiments:
+		-experiment:
+		number: 2
+		input_data:
+			buffer_size: 32
+		results:
+			duration: 35
+investigation:
+	travel_variant: Forward
+	experiments:
+		-experiment:
+		number: 3
+		input_data:
+			buffer_size: 64
+		results:
+			duration: 58
+investigation:
+	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 3
+		input_data:
+			buffer_size: 64
+		results:
+			duration: 55
+investigation:
+	travel_variant: Random
+	experiments:
+		-experiment:
+		number: 3
+		input_data:
+			buffer_size: 64
+		results:
+			duration: 79
+investigation:
+	travel_variant: Forward
+	experiments:
+		-experiment:
+		number: 4
+		input_data:
+			buffer_size: 128
+		results:
+			duration: 119
+investigation:
+	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 4
+		input_data:
+			buffer_size: 128
+		results:
+			duration: 114
+investigation:
+	travel_variant: Random
+	experiments:
+		-experiment:
+		number: 4
+		input_data:
+			buffer_size: 128
+		results:
+			duration: 170
+investigation:
+	travel_variant: Forward
+	experiments:
+		-experiment:
+		number: 5
+		input_data:
+			buffer_size: 256
+		results:
+			duration: 239
+investigation:
+	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 5
+		input_data:
+			buffer_size: 256
+		results:
+			duration: 238
+investigation:
+	travel_variant: Random
+	experiments:
+		-experiment:
+		number: 5
+		input_data:
+			buffer_size: 256
+		results:
+			duration: 346
+investigation:
+	travel_variant: Forward
+	experiments:
+		-experiment:
+		number: 6
+		input_data:
+			buffer_size: 512
+		results:
+			duration: 490
+investigation:
+	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 6
+		input_data:
+			buffer_size: 512
+		results:
+			duration: 468
+investigation:
+	travel_variant: Random
+	experiments:
+		-experiment:
+		number: 6
+		input_data:
+			buffer_size: 512
+		results:
+			duration: 486
+
