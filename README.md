@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/OzoNeTT/lab-02-cache.svg?branch=master)](https://travis-ci.org/OzoNeTT/lab-02-cache) [![Build status](https://ci.appveyor.com/api/projects/status/qpc0n0nryuh8yas7?svg=true)](https://ci.appveyor.com/project/OzoNeTT/lab-02-cache)
+[![Build Status](https://travis-ci.org/OzoNeTT/lab-02-cache.svg?branch=master)](https://travis-ci.org/OzoNeTT/lab-02-cache) 
 # Лабораторная работа №2
 
 > Кэш - промежуточный буфер с быстрым доступом, содержащий информацию, которая может быть запрошена с наибольшей вероятностью. Доступ к данным в кэше осуществляется быстрее, чем выборка исходных данных из более медленной памяти или удаленного источника, однако её объём существенно ограничен по сравнению с хранилищем исходных данных.
