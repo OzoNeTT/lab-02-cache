@@ -33,7 +33,7 @@ investigation:
 		input_data:
 			buffer_size: 32
 		results:
-			duration: 33
+			duration: 28
 investigation:
 	travel_variant: Backward
 	experiments:
@@ -42,7 +42,7 @@ investigation:
 		input_data:
 			buffer_size: 32
 		results:
-			duration: 37
+			duration: 27
 investigation:
 	travel_variant: Random
 	experiments:
@@ -51,7 +51,7 @@ investigation:
 		input_data:
 			buffer_size: 32
 		results:
-			duration: 35
+			duration: 27
 investigation:
 	travel_variant: Forward
 	experiments:
@@ -60,7 +60,7 @@ investigation:
 		input_data:
 			buffer_size: 64
 		results:
-			duration: 58
+			duration: 56
 investigation:
 	travel_variant: Backward
 	experiments:
@@ -69,7 +69,7 @@ investigation:
 		input_data:
 			buffer_size: 64
 		results:
-			duration: 55
+			duration: 56
 investigation:
 	travel_variant: Random
 	experiments:
@@ -78,7 +78,7 @@ investigation:
 		input_data:
 			buffer_size: 64
 		results:
-			duration: 79
+			duration: 73
 investigation:
 	travel_variant: Forward
 	experiments:
@@ -87,7 +87,7 @@ investigation:
 		input_data:
 			buffer_size: 128
 		results:
-			duration: 119
+			duration: 111
 investigation:
 	travel_variant: Backward
 	experiments:
@@ -96,7 +96,7 @@ investigation:
 		input_data:
 			buffer_size: 128
 		results:
-			duration: 114
+			duration: 115
 investigation:
 	travel_variant: Random
 	experiments:
@@ -105,7 +105,7 @@ investigation:
 		input_data:
 			buffer_size: 128
 		results:
-			duration: 170
+			duration: 181
 investigation:
 	travel_variant: Forward
 	experiments:
@@ -114,7 +114,7 @@ investigation:
 		input_data:
 			buffer_size: 256
 		results:
-			duration: 239
+			duration: 221
 investigation:
 	travel_variant: Backward
 	experiments:
@@ -123,7 +123,7 @@ investigation:
 		input_data:
 			buffer_size: 256
 		results:
-			duration: 238
+			duration: 221
 investigation:
 	travel_variant: Random
 	experiments:
@@ -132,7 +132,7 @@ investigation:
 		input_data:
 			buffer_size: 256
 		results:
-			duration: 346
+			duration: 323
 investigation:
 	travel_variant: Forward
 	experiments:
@@ -141,9 +141,18 @@ investigation:
 		input_data:
 			buffer_size: 512
 		results:
-			duration: 490
+			duration: 522
 investigation:
 	travel_variant: Backward
+	experiments:
+		-experiment:
+		number: 6
+		input_data:
+			buffer_size: 512
+		results:
+			duration: 457
+investigation:
+	travel_variant: Random
 	experiments:
 		-experiment:
 		number: 6
@@ -151,13 +160,4 @@ investigation:
 			buffer_size: 512
 		results:
 			duration: 468
-investigation:
-	travel_variant: Random
-	experiments:
-		-experiment:
-		number: 6
-		input_data:
-			buffer_size: 512
-		results:
-			duration: 486
 

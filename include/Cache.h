@@ -38,14 +38,93 @@ void addDataToString(string& str, unsigned int id, string name, int64_t time, un
 }
 
 void GraphBuild(vector<Node> vect) {
-    vector<string> columnNames;
-    vector<unsigned int> bufferSizes;
-    vector<vector<unsigned int>> rows;
+    std::string result = R"(<html>
+        <head>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+              google.charts.load('current', {'packages':['corechart']});
+              google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('number', 'X');
+         data.addColumn('number', 'forward');
+        data.addColumn('number', 'backward');
+         data.addColumn('number', 'random');
+        )";
 
-    for (size_t i = 0; i < vect.size(); i++) {
+    vector<unsigned int> bufferSizes;
+    vector<int64_t> forwardTime;
+    vector<int64_t> backwardTime;
+    vector<int64_t> randomTime;
+    int counter = 0;
+
+    for( unsigned int i = 0; i < vect.size(); i++) {
         Node node = vect[i];
-        columnNames.push_back(node.name);
-        bufferSizes.push_back(node.buffer);
+        if(counter  == 3) {
+            bufferSizes.push_back(node.buffer);
+            counter = 0;
+        }
+
+        if(node.name == "Forward"){
+            forwardTime.push_back(node.time);
+        }
+        else if(node.name == "Backward") {
+            backwardTime.push_back(node.time);
+        }
+        else if(node.name == "Random") {
+            randomTime.push_back(node.time);
+        }
+        counter++;
+    }
+
+    result += "\ndata.addRows([\n";
+    for (size_t i = 0; i < bufferSizes.size(); i++) {
+        result += "[" + std::to_string(bufferSizes[i]) + ", ";
+        result += std::to_string(forwardTime[i]) + ", ";
+        result += std::to_string(backwardTime[i]) + ", ";
+        result += std::to_string(randomTime[i]) + ", ";
+
+        result += "],\n";
+    }
+    result += "]);\n";
+
+    result += R"(
+              var options = {
+                chart: {
+                  title: 'CPU cache',
+                },
+                hAxis: {
+                  title: 'Buffer size, KiB',
+                  logScale: false
+                },
+                vAxis: {
+                  title: 'Time, milliseconds',
+                  logScale: false
+                },
+                explorer: {
+                  axis: 'horizontal',
+                  keepInBounds: true,
+                  maxZoomIn: 8.0,
+                },
+                width: 1200,
+                height: 800,
+              };
+              var chart = new google.visualization.LineChart(document.getElementById('line_top_x'));
+              chart.draw(data, options);
+            }
+          </script>
+        </head>
+        <body>
+          <div id="line_top_x"></div>
+        </body>
+        </html>
+        )";
+
+    std::ofstream out;          // поток для записи
+    out.open("..\\result\\graf.html"); // окрываем файл для записи
+    if (out.is_open())
+    {
+        out << result << endl;
     }
 }
 
@@ -146,5 +225,6 @@ bool Cache::run() {
     {
         out << res << endl;
     }
+    GraphBuild(exps);
     return true;
 }
